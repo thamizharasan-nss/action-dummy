@@ -22,5 +22,8 @@ jobs:
         mkdir app
         ls -la app
 
+    - name: print input
+      run: echo "${{ inputs.name }}"
+
       
   
