@@ -17,7 +17,7 @@ jobs:
       run: |
         mkdir app
         cd app
-        git clone . 
+        cp -R * app
         ls -la 
         
       
