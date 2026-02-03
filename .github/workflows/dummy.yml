@@ -10,10 +10,9 @@ on:
       age:
         type: choice
         description: 'Age'
-        default: 
+        options:
           - Male
           - Female
-       required: true   
 jobs:
   build:
     runs-on: ubuntu-latest
