@@ -1,0 +1,17 @@
+name: checkout
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout action 
+        uses: actions/checkout@v4 
+      - name: use the script 
+        run: | 
+          ls -la
+        shell: bash  
+        
+  
