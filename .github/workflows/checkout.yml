@@ -13,5 +13,7 @@ jobs:
         run: | 
           ls -la
         shell: bash  
+      - name: shell scrpit 
+        run: ./dummy.sh
         
   
