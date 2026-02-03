@@ -1,8 +1,12 @@
 name: dummy workflow
 
 on:
-  push:
   workflow_dispatch: 
+    inputs:
+      name:
+        description: 'Name'
+        default: 'test' 
+        type: string 
 
 jobs:
   build:
