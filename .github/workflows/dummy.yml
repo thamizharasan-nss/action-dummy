@@ -12,6 +12,13 @@ jobs:
       run: |
         sudo apt install git 
         git --version 
+
+    - name: clone 
+      run: |
+        mkdir app
+        cd app
+        git clone . 
+        ls -la 
         
       
   
