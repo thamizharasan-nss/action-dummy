@@ -16,7 +16,6 @@ jobs:
     - name: clone 
       run: |
         mkdir app
-        cd app
         cp -R . app
         ls -la 
         
