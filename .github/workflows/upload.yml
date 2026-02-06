@@ -1,0 +1,12 @@
+name: upload and download 
+on:
+  workflow_dispatch: 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print the date 
+        run: date >> sample.txt
+        
+      - name: cat the sample.txt
+        run: cat sample.txt
