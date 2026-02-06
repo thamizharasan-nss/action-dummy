@@ -16,3 +16,19 @@ jobs:
         with:
           name: my-artifact 
           path: sample.txt
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download the artifact 
+        uses: actions/download-artifact@v4
+        with:
+          name: my-artifact 
+      - name: unzip 
+        run: |
+           unzip my-artifact
+           cd my-artifact
+           cat sample.txt
+          
+
+        
