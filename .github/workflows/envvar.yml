@@ -1,0 +1,16 @@
+name: using the env in  workflow 
+
+on:
+  push:
+
+env: 
+   app: WEBAPP
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: using the env 
+        run: echo " using the app ${{ env.app }}
+          
+    
+    
