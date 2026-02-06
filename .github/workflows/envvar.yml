@@ -19,6 +19,15 @@ jobs:
      steps:
        - name: using the job level 
          run: echo "we are in the team ${{ env.team }}"
+
+  tests:
+     runs-on: ubuntu-latest
+     steps:
+       - name: using the step level 
+         env:
+           owner: thamizh
+         run: echo "The name of owner is ${{ env.owner }}"  
+           
           
     
     
