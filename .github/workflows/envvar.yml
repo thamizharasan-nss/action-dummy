@@ -11,6 +11,14 @@ jobs:
     steps:
       - name: using the env 
         run: echo "using the app ${{ env.app }}"
+
+  deploy:
+     runs-on: ubuntu-latest
+     env:
+       team: SRE
+     steps:
+       - name: using the job level 
+         run: echo "we are in the team ${{ env.team }}"
           
     
     
