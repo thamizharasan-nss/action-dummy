@@ -19,16 +19,18 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: build   # ✅ REQUIRED
     steps:
-      - name: download the artifact 
+      - name: download the artifact
         uses: actions/download-artifact@v4
         with:
-          name: my-artifact 
-      - name: unzip 
+          name: my-artifact
+          path: my-artifact
+
+      - name: read the file
         run: |
-           unzip my-artifact
-           cd my-artifact
-           cat sample.txt
+          ls -l my-artifact
+          cat my-artifact/sample.txt
           
 
         
