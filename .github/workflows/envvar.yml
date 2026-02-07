@@ -18,7 +18,7 @@ jobs:
        team: SRE
      steps:
        - name: using the job level 
-         run: echo "we are in the team ${{ env.team }}"
+         run: echo "we are in the team ${{ env.team }}" 
 
   tests:
      runs-on: ubuntu-latest
@@ -27,6 +27,9 @@ jobs:
          env:
            owner: thamizh
          run: echo "The name of owner is ${{ env.owner }}"  
+
+       - name: uisng the repo level scrects
+         run: echo ${{ secrets.AWS_REGION }}
            
           
     
