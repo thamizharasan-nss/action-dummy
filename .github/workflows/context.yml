@@ -8,4 +8,9 @@ jobs:
     steps:
       - name: using the context
         run: echo ${{ github.actor }}
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"  
   
