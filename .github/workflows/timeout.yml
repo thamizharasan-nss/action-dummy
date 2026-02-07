@@ -1,0 +1,11 @@
+name: using the timeout   
+on:
+  workflow_dispatch: 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: using timeout in step level
+        timeout-minutes: 1
+        run: sleep 600s
+  
