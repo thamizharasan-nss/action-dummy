@@ -1,0 +1,25 @@
+name: using the concurrency in the workflow
+on:
+  workflow_dispatch: 
+     inputs:
+       app:
+         description: "App name"
+         default: "webapp"
+         type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dummy job 
+        run: echo "dummy job"
+
+  deploy:
+    needs: build 
+    runs-on: ubuntu-latest
+    concurrency: 
+      cancel-in-progress: true
+      group: prod-deploy
+    steps:
+      - name: using the sleeep command  
+        run: sleep 600s
+        
