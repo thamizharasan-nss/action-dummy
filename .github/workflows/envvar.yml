@@ -14,6 +14,7 @@ jobs:
 
   deploy:
      runs-on: ubuntu-latest
+     needs: build
      env:
        team: SRE
      steps:
@@ -22,6 +23,7 @@ jobs:
 
   tests:
      runs-on: ubuntu-latest
+     needs: deploy
      steps:
        - name: using the step level 
          env:
@@ -30,6 +32,14 @@ jobs:
 
        - name: uisng the repo level scrects
          run: echo ${{ secrets.AWS_REGION }}
+
+  repoenv:
+     runs-on: ubuntu-latest
+     needs: tests
+     steps:
+       - name: using the repo level env variable 
+         run: echo "dummy"
+         
            
           
     
