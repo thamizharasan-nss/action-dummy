@@ -1,0 +1,11 @@
+name: using the github action context 
+on:
+  push:
+  workflow_dispatch: 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: using the context
+        run: echo ${{ github.actor }}
+  
