@@ -2,8 +2,8 @@ name: event filter
 on:
   push:
     branches: [ main, dev ] 
-    branches-ignore: 
-      - feature/*
+    #branches-ignore: 
+     # - feature/*
   pull_request: 
     types: 
       - opened
