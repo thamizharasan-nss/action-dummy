@@ -1,0 +1,13 @@
+name: event filter
+on:
+  push:
+    branches-ignore: 
+      - feature/*
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: event fileter
+        run: echo ${{ github.event_name }}
+    
+  
