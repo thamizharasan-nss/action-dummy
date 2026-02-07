@@ -1,0 +1,13 @@
+name: using the matrix option
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: docker information
+      run: docker info  
