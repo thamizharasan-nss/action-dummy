@@ -38,7 +38,7 @@ jobs:
      needs: tests
      steps:
        - name: using the repo level env variable 
-         run: echo "dummy"
+         run: echo "dummy value ${{ vars.DOCKERHUB_USERNAME }}"
          
            
           
