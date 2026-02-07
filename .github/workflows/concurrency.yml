@@ -17,7 +17,7 @@ jobs:
     needs: build 
     runs-on: ubuntu-latest
     concurrency: 
-      cancel-in-progress: true
+      cancel-in-progress: false
       group: prod-deploy
     steps:
       - name: using the sleeep command  
