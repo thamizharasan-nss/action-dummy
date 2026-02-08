@@ -7,8 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step java and python 
+        id: jobrepe
         uses: thamizharasan-nss/installjavapythonaction@main
+        with:
+          javaversion: "22"
 
+      - name: print the output
+        run: echo ${{ steps.jobrepe.outputs.branchname }} 
+           
       - name: Ds java version
         run: java --version 
 
