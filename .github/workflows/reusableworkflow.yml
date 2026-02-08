@@ -1,0 +1,17 @@
+name: setup java and python
+on:
+  workflow_call: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "22"
+      - name: Install python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
