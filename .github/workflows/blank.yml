@@ -38,5 +38,5 @@ jobs:
     steps:
       - name: exposing the job output
         run: echo ${{ needs.build.outputs.job1 }}
-      - 
+
          
