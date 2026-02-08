@@ -1,0 +1,14 @@
+name: using the step output   
+on:
+   workflow_dispatch: 
+
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+     - name: step output 
+       id: dummy
+       run: echo "APPLICATION:WEBAPPLICATION" >> $GITHUB_OUTPUT
+
+     - name: result the output
+       run: echo ${{ steps.dummy.outputs.APPLICATION }}
