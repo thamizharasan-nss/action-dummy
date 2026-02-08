@@ -5,10 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: using the reusable workflow 
-        uses: ./.github/workflows/reusableworkflow.yml
+    uses: ./.github/workflows/reusableworkflow.yml
       
     
   
