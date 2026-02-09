@@ -1,0 +1,22 @@
+name: docker caller workflow
+on:
+  workflow_dispatch: 
+concurrency: 
+      cancel-in-progress: false
+      group: prod-deploy
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print the echo command
+        run: echo "dummy value"
+        
+      - name: using the docker 
+        uses: thamizharasan-nss/installjavapythonaction/actions@main
+        with:
+          commnd: |
+            nginx -v
+            nginx -t
+        
+  
