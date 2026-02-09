@@ -14,9 +14,6 @@ jobs:
         
       - name: using the docker 
         uses: thamizharasan-nss/installjavapythonaction/actions@main
-        with:
-          commnd: |
-            nginx -v
-            nginx -t
+        
         
   
